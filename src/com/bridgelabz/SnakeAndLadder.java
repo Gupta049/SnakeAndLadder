@@ -5,6 +5,7 @@ import sun.awt.Win32ColorModel24;
 public class SnakeAndLadder {
     static final int WIN_POSITION = 100;
     static int playerPosition = 0;
+    static  int diceCount = 0;
     public static void main(String[] args) {
         System.out.println("Snake and Ladder Game");
         System.out.println(" Initial position : " + playerPosition);
@@ -23,6 +24,7 @@ public class SnakeAndLadder {
                     break;
                 case 1:
                     //ladder
+                    diceCount++;
                     playerPosition = playerPosition + diceValue;
                     if(playerPosition > WIN_POSITION){
                         playerPosition = playerPosition - diceValue;
@@ -31,6 +33,7 @@ public class SnakeAndLadder {
                     break;
                 case 2:
                     //snake
+                    diceCount++;
                     playerPosition = playerPosition - diceValue;
                     if (playerPosition < 0) {
                         playerPosition = 0;
@@ -41,6 +44,7 @@ public class SnakeAndLadder {
                     System.out.println("Invalid");
                     break;
             }
+            System.out.println("Dice count to win the match : " + diceCount);
         }
     }
 }
