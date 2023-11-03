@@ -13,7 +13,7 @@ public class SnakeAndLadder {
             int diceValue = (int) (Math.random() * 10) % 6 + 1;
             System.out.println("Dice Value = " + diceValue);
 
-            // generating random number for checking player position
+            // generating random number for checking player positions
             int randomOption = (int) (Math.random() * 10 % 3);
             System.out.println("Choice = " + randomOption);
 
